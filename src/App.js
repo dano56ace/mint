@@ -80,6 +80,7 @@ export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px dashed var(--secondary);
   background-color: var(--accent);
+  border-radius: 100%;
   width: 200px;
   @media (min-width: 900px) {
     width: 250px;
@@ -202,16 +203,7 @@ function App() {
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-       <s.TextTitle
-              style={{
-                textAlign: "center",
-                fontSize: 50,
-                fontWeight: "bold",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Mint Your Rubber Doug
-            </s.TextTitle>
+        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -306,20 +298,14 @@ function App() {
                 type: "erc-721"
             }}
         /> 
-          <s.SpacerSmall />
                     <StyledButton
-                      style={{
-                        width: "200px",
-                        height:"50px",
-                        color: "var(--secondary-text)",
-                      }}
                       onClick={(e) => {
                         e.preventDefault();
                         dispatch(connect());
                         getData();
                       }}
                     >
-                      CONNECT WALLET
+                      CONNECT
                     </StyledButton>
                     {blockchain.errorMsg !== "" ? (
                       <>
@@ -401,6 +387,7 @@ function App() {
             <StyledImg
               alt={"example"}
               src={"/config/images/example.gif"}
+              style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
         </ResponsiveWrapper>
@@ -409,7 +396,7 @@ function App() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "#fff",
+              color: "var(--primary-text)",
             }}
           >
             Please make sure you are connected to the right network (
@@ -420,7 +407,7 @@ function App() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "#fff",
+              color: "var(--primary-text)",
             }}
           >
             We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
