@@ -80,7 +80,6 @@ export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px dashed var(--secondary);
   background-color: var(--accent);
-  border-radius: 100%;
   width: 200px;
   @media (min-width: 900px) {
     width: 250px;
@@ -201,9 +200,19 @@ function App() {
         flex={1}
         ai={"center"}
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.jpg" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+
+<s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 50,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+          Mint your Rubber Doug
+            </s.TextTitle>
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -288,24 +297,29 @@ function App() {
                     </s.TextDescription>
                     <s.SpacerSmall />
                     <CrossmintPayButton
-            collectionTitle="Rubber Doug - Genesis"
-            collectionDescription="The Rubber Doug's is a collection of 300 unique Doug NFTs— unique digital collectibles living on the Ethereum blockchain. Your Doug doubles as your Snap Delivered membership card, and grants access to members-only benefits. Future areas and perks can be unlocked by the community through roadmap activation."
-            collectionPhoto="https://rubberdoug.io/img/core-img/collection_cover.jpg"
-            clientId="ba6f253c-4901-426f-9a12-cfa1ea4752f3"
-            environment="staging"
-            mintConfig={{
-                price: "0.11",
-                type: "erc-721"
-            }}
-        /> 
+                collectionTitle="Rubber Doug - Genesis"
+                collectionDescription="The Rubber Doug's is a collection of 300 unique Doug NFTs— unique digital collectibles living on the Ethereum blockchain. Your Doug doubles as your Snap Delivered membership card, and grants access to members-only benefits. Future areas and perks can be unlocked by the community through roadmap activation"
+                collectionPhoto=""
+                clientId="e69d92ce-73fd-435a-ae2b-e4e7fa9da34e"
+                mintConfig={{"type":"erc-721","price":"<0.11>"}}
+            />
+                                <s.SpacerSmall />
+
                     <StyledButton
+                        style={{
+                          textAlign: "center",
+                          width: "250px",
+                          height:"40px",
+                          color: "var(--accent-text)",
+                        }}
+
                       onClick={(e) => {
                         e.preventDefault();
                         dispatch(connect());
                         getData();
                       }}
                     >
-                      CONNECT
+                      CONNECT WALLET
                     </StyledButton>
                     {blockchain.errorMsg !== "" ? (
                       <>
@@ -387,7 +401,7 @@ function App() {
             <StyledImg
               alt={"example"}
               src={"/config/images/example.gif"}
-              style={{ transform: "scaleX(-1)" }}
+              
             />
           </s.Container>
         </ResponsiveWrapper>
@@ -396,7 +410,7 @@ function App() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "var(--primary-text)",
+              color: "var(--secondary-text)",
             }}
           >
             Please make sure you are connected to the right network (
@@ -407,7 +421,7 @@ function App() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "var(--primary-text)",
+              color: "var(--secondary-text)",
             }}
           >
             We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to

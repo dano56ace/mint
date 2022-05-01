@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x6213794Ad46f62298166Be75BA9Abc91ecc79490",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x6213794Ad46f62298166Be75BA9Abc91ecc79490#code",
+  "CONTRACT_ADDRESS": "0xce13cF04E0d00efB1a68A156Ea7197D975E2ABEc",
+  "SCAN_LINK": "https://etherscan.io/address/0xce13cF04E0d00efB1a68A156Ea7197D975E2ABEc#code",
   "NETWORK": {
-    "NAME": "Rinkby",
+    "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Rubber Doug - Genesis",
-  "SYMBOL": "NCC",
+  "SYMBOL": "DOUG",
   "MAX_SUPPLY": 300,
   "WEI_COST": 11000000000000000000,
   "DISPLAY_COST": 0.11,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/rubber-doug-genesis-v4",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/rubber-doug-genesis",
   "SHOW_BACKGROUND": true
 }
