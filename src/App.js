@@ -296,6 +296,8 @@ function App() {
                       Connect to the {CONFIG.NETWORK.NAME} network
                     </s.TextDescription>
                     <s.SpacerSmall />
+
+
                     <CrossmintPayButton
                 collectionTitle="Rubber Doug - Genesis"
                 collectionDescription="The Rubber Doug's is a collection of 300 unique Doug NFTs— unique digital collectibles living on the Ethereum blockchain. Your Doug doubles as your Snap Delivered membership card, and grants access to members-only benefits. Future areas and perks can be unlocked by the community through roadmap activation"
@@ -304,8 +306,6 @@ function App() {
                 mintConfig={{"type":"erc-721","price":"0.11"}}
             />
                                             <s.SpacerSmall />
-
-
                               <CrossmintPayButton
                 collectionTitle="Rubber Doug - Genesis"
                 collectionDescription="The Rubber Doug's is a collection of 300 unique Doug NFTs— unique digital collectibles living on the Ethereum blockchain. Your Doug doubles as your Snap Delivered membership card, and grants access to members-only benefits. Future areas and perks can be unlocked by the community through roadmap activation"
@@ -316,22 +316,7 @@ function App() {
 
                                 <s.SpacerSmall />
 
-                    <StyledButton
-                        style={{
-                          textAlign: "center",
-                          width: "250px",
-                          height:"40px",
-                          color: "var(--accent-text)",
-                        }}
-
-                      onClick={(e) => {
-                        e.preventDefault();
-                        dispatch(connect());
-                        getData();
-                      }}
-                    >
-                      CONNECT WALLET
-                    </StyledButton>
+                 
                     {blockchain.errorMsg !== "" ? (
                       <>
                         <s.SpacerSmall />
