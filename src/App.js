@@ -303,6 +303,16 @@ function App() {
                 clientId="e69d92ce-73fd-435a-ae2b-e4e7fa9da34e"
                 mintConfig={{"type":"erc-721","price":"0.11"}}
             />
+                                            <s.SpacerSmall />
+
+
+                              <CrossmintPayButton
+                collectionTitle="Rubber Doug - Genesis"
+                collectionDescription="The Rubber Doug's is a collection of 300 unique Doug NFTs— unique digital collectibles living on the Ethereum blockchain. Your Doug doubles as your Snap Delivered membership card, and grants access to members-only benefits. Future areas and perks can be unlocked by the community through roadmap activation"
+                collectionPhoto=""
+                clientId="e69d92ce-73fd-435a-ae2b-e4e7fa9da34e"
+                mintConfig={{"type":"erc-721","price":"<SELECTED_PRICE_IN_ETHER>"}}
+            />
 
                                 <s.SpacerSmall />
 
