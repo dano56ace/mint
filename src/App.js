@@ -203,16 +203,7 @@ function App() {
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.jpg" : null}
       >
 
-<s.TextTitle
-              style={{
-                textAlign: "center",
-                fontSize: 50,
-                fontWeight: "bold",
-                color: "var(--accent-text)",
-              }}
-            >
-          Mint your Rubber Doug
-            </s.TextTitle>
+
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -239,7 +230,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+             Only 300 nfts first come first serve
             </s.TextTitle>
             <s.TextDescription
               style={{
