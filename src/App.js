@@ -211,7 +211,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-          Mint your Rubber Doug
+          Mint your Rubber Doug!
             </s.TextTitle>
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
