@@ -211,7 +211,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-          Mint your Rubber Doug
+          Mint your Rubber Doug NFT
             </s.TextTitle>
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
@@ -296,13 +296,14 @@ function App() {
                       Connect to the {CONFIG.NETWORK.NAME} network
                     </s.TextDescription>
                     <s.SpacerSmall />
-                    <CrossmintPayButton
+          
+          <CrossmintPayButton
           collectionTitle="Rubber Doug - Genesis"
           collectionDescription="The Rubber Doug's is a collection of 300 unique Doug NFTs— unique digital collectibles living on the Ethereum blockchain. Your Doug doubles as your Snap Delivered membership card, and grants access to members-only benefits. Future areas and perks can be unlocked by the community through roadmap activation"
           collectionPhoto="https://rubberdoug.io/img/core-img/collection_cover.jpg"
           clientId="e69d92ce-73fd-435a-ae2b-e4e7fa9da34e"
           mintConfig={{type: "erc721", price: "0.11"}}
-      />
+          />
 
 
                                 <s.SpacerSmall />
